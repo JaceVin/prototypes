@@ -1,0 +1,34 @@
+@use 'global'
+
+.form-style
+    padding-top: 20px
+
+    opacity: 0
+    animation: open 0.4s 0.4s both
+
+    & input
+        padding: 0 10px
+        margin-bottom: 45px
+        background-color: global.$light
+        color: global.$dark
+        +global.size(40vw, 8vh)
+    
+        outline: 0
+        border: none
+        border-radius: 1000px
+    
+        text-align: center
+        font:
+            size: 25px
+            weight: bold
+            family: inherit
+
+
+        &::placeholder
+            color: global.$dark
+            font:
+                weight: normal
+                size: 25px
+
+    &:last-child
+        margin-bottom: 20px

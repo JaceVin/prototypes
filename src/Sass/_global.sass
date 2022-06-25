@@ -1,0 +1,37 @@
+// Defaults
+$blue: #b1ffee9c
+$gray: #646464
+$orange: #ffc062
+$light: #ffcc80
+$medium: #e0b370
+$dark: #c59e64
+// $dark_background: #e0b370
+// $button_background: #d3a969
+
+// Shadows
+$light_shadow: #0000003d
+$dark_shadow: #00000060
+
+
+$button_height: 30px
+
+=size($width: auto, $height: auto)
+    height: $height
+    width: $width
+
+@keyframes openWrap
+    from
+        left: 50%
+        +size(0)
+        opacity: 0
+    to
+        opacity: 1
+
+@keyframes open
+    from
+        left: 50%
+        opacity: 0
+    to
+        opacity: 1
+
+$text_animation: open 0.7s 0.3s both

@@ -1,0 +1,161 @@
+@use 'NavigationBar'
+@use 'Forms'
+@use 'Lists'
+@use 'GameSelected'
+
+@use 'global'
+@use "sass:math"
+
+body
+    /* margin-bottom: -20px */
+    /* background-color: #ffd79b */
+    background-color: global.$gray
+    color: global.$light
+    position: relative
+    font-family: Nunito, Verdana, Geneva, Tahoma, sans-serif
+
+
+button
+    margin-top: 30px
+    border: none
+    border-radius: math.div(global.$button_height, 2)
+    +global.size(max-content, global.$button_height)
+    outline: none
+    box-shadow: 0 5px 16px global.$light_shadow, 0 17px 50px global.$light_shadow
+    background-color: global.$dark
+    color: global.$light
+    font:
+        weight: bold
+        size: 20px
+
+    transition-duration: 0.1s
+
+    opacity: 0
+    animation: open .5s forwards
+
+    &:active
+        box-shadow: 0 1px 5px global.$dark_shadow, 0 13px 40px global.$dark_shadow
+
+
+#game-trailer
+    box-shadow: 0 2px 16px global.$light_shadow, 0 14px 50px global.$light_shadow
+
+.game-info img, #account-link img, .game-details img
+    box-shadow: 0 2px 16px global.$light_shadow, 0 14px 50px global.$light_shadow
+
+    &:active
+        box-shadow: 0 1px 5px global.$dark_shadow, 0 13px 40px global.$dark_shadow
+
+a:active
+    text-shadow: 0 1px 5px global.$light_shadow
+    transform: translate(inherit, 4px)
+a
+    text-shadow: 0 2px 8px global.$dark_shadow
+    transition-duration: 0.3s
+    &:hover
+        opacity: 0.8 !important
+
+
+::selection
+    /* background-color: #b1ffee9c */
+    background-color: global.$gray
+
+
+.plain-text
+    text-decoration: none
+    color: global.$light
+    & h1
+        vertical-align: top
+
+
+
+.align
+    position: relative
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+
+.curve
+    border-radius: 75px
+
+
+.extra-btn
+    vertical-align: super
+    margin-left: 10px
+    padding: 0
+    +global.size(16px, 16px)
+
+    border-radius: 100px
+    border-color: #ffffff
+
+    background-color: transparent
+    color: #ffffff
+    outline: 0
+
+    opacity: 0
+    animation: open 1s forwards
+
+.main
+    opacity: 0
+    background-color: global.$light
+
+    max-width: 195vh
+    position: fixed
+    inset: 14vh auto 4vh 50%
+    transform: translate(-50%)
+    +global.size(90vw, 78vh)
+    z-index: 10
+
+    padding: 2vmin 2vw 1vh
+    overflow-y: scroll
+    text-align: center
+
+    animation: openWrap 1s 0.01s both
+    box-shadow: 0 2px 16px global.$dark_shadow, 0 14px 50px global.$light_shadow
+
+    &::-webkit-scrollbar
+        display: none
+
+
+.title
+    margin: 0px
+    margin-bottom: 3vh
+    display: inline-block
+    font-size: 7.45vmin
+    color: global.$dark
+
+    opacity: 0
+    animation: open 0.5s both
+
+#wrap-middle
+    background-color: global.$medium
+    text-align: center
+    /* margin: 0 20px
+     * margin-top: 5px
+     * height: 630px */
+
+    max-width: 190vh
+    position: fixed
+    inset: 12vh auto 9vh 50%
+    transform: translate(-50%)
+    +global.size(90vw, 65vh)
+    z-index: 0
+
+    overflow:
+        y: scroll
+        x: hidden
+
+    // padding-bottom: 40px
+
+    opacity: 0
+    animation: openWrap 1s 0.02s both
+
+    box-shadow: 0 2px 16px global.$dark_shadow, 0 14px 50px global.$light_shadow
+
+    &::-webkit-scrollbar
+        display: none
+
+
+a:focus
+    background-color: transparent

@@ -1,0 +1,51 @@
+@use 'global'
+
+#game-details
+    display: inline-grid
+    padding-top: 8vh
+    
+    grid:
+        template: max-content / min-content min-content min-content
+        row-gap: 8vh
+
+    overflow:
+        y: scroll
+        x: hidden
+
+    position: relative
+    inset: 0 auto
+
+    &::-webkit-scrollbar
+        display: none
+    
+    & img
+        opacity: 0
+        animation: open 0.5s 0.7s both
+    
+        background-color: global.$light
+        margin: 0 2vw
+        +global.size(300px, 168px)
+        border-radius: 30px
+
+#game-trailer
+    display: block
+    background-color: global.$light
+    margin: auto
+    margin-top: 2vh
+    outline: none
+    border-radius: 30px
+
+    opacity: 0
+    animation: open 0.5s 0.7s both
+    
+    // +global.size(auto, auto)
+    max-height: 90%
+    max-width: 70%
+
+@media screen and (max-width: 1250px)
+    #game-details
+        grid-template: max-content / min-content min-content
+
+@media screen and (max-width: 880px)
+    #game-details
+        grid-template: max-content / min-content

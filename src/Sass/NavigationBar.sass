@@ -1,0 +1,65 @@
+@use 'global'
+
+$fitSize: 6vmin
+
+.navigation-bar
+    background-color: gray
+    margin: 0
+    padding: 2vmin 2vw 1vh
+
+    max-width: 200vh
+    position: fixed
+    inset: 2vh auto auto 50%
+    transform: translate(-50%)
+    +global.size(92vw, 93vh)
+    z-index: -2
+
+    animation: openWrap 1s
+
+    box-shadow: 0 2px 16px global.$dark_shadow, 0 14px 50px global.$dark_shadow
+
+#app-name
+    display: inline
+    font-size: $fitSize
+    margin: 0
+    padding-left: calc(1.5vw + 60px)
+    color: global.$orange
+
+    opacity: 0
+    animation: global.$text_animation
+
+#account-link
+    display: inline-grid
+    grid-template-columns: max-content max-content
+    column-gap: 1vw
+
+    float: right
+
+    opacity: 0
+    animation: global.$text_animation
+
+    & > :last-child
+        margin-right: calc(1.5vw + 60px)
+
+    & h1
+        display: inline
+        margin: 0
+        // vertical-align: top
+        color: global.$orange
+        font-size: $fitSize
+    & img
+        display: inline
+        border-radius: 100px
+        $image-size: $fitSize
+        +global.size($image-size, $image-size)
+        margin-top: 2vh
+
+@media screen and (max-width: 415px)
+    #app-name, #account-link
+        display: block
+        padding: 0
+        text-align: center
+        float: none
+        margin-bottom: 1vh
+        & > :last-child
+            margin: 0
