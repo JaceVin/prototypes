@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { connect } from 'react-redux'
-import dynamic_logo from '../resources/dynamic-logo.jpeg'
-import brawlhalla_goldforge from '../resources/Brawlhalla Goldforge.mkv'
+// import dynamic_logo from '../resources/dynamic-logo.jpeg'
+// import brawlhalla_goldforge from '../resources/Brawlhalla Goldforge.mkv'
 
 function GameSelected({props, games}) {
 

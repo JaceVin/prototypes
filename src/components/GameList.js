@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { NavLink, useParams, useNavigate } from 'react-router-dom'
-import dynamic_logo from '../resources/dynamic-logo.jpeg'
+// import dynamic_logo from '../resources/dynamic-logo.jpeg'
 
 function GameList({props, games}) {
 
