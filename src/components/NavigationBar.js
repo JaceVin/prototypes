@@ -18,10 +18,10 @@ function NavigationBar({account}) {
             text.innerHTML = account.nickname
             accountLink.appendChild(text)
 
-            let image = document.createElement("img")
-            image.src = `${dynamic_logo}`
-            image.alt = ""
-            accountLink.appendChild(image)
+            // let image = document.createElement("img")
+            // image.src = `${dynamic_logo}`
+            // image.alt = ""
+            // accountLink.appendChild(image)
         }
     });
 
