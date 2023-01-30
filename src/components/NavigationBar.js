@@ -10,8 +10,8 @@ function NavigationBar({account}) {
         let text = document.createElement("h1")
         if (account.nickname === '') {
             accountLink.innerHTML = ''
-            text.innerHTML = "Log in"
-            //// text.innerHTML = "Deployed!"
+            //// text.innerHTML = "Log in"
+            text.innerHTML = "Deployed!"
             accountLink.appendChild(text)
 
         } else {
