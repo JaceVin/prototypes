@@ -11,6 +11,7 @@ function NavigationBar({account}) {
         if (account.nickname === '') {
             accountLink.innerHTML = ''
             text.innerHTML = "Log in"
+            //// text.innerHTML = "Deployed!"
             accountLink.appendChild(text)
 
         } else {
